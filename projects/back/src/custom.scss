@@ -1,0 +1,39 @@
+/** Basic color setting  Start */
+// primary color
+$primary-100: #FFF0DF;
+$primary-200: #FBE2C4;
+$primary-400: #BAA087;
+$primary-500: #936E43;
+$primary-900: #3D2F1C;
+//secondary color
+$secondary-300: #8891B9;
+$secondary-500: #374756;
+//danger
+$danger-500: #C20F0F;
+$danger-700: #763B3B;
+//gray
+$gray-100: #F5F5F5;
+$gray-200: #E0E0E0;
+$gray-500: #B3B4BB;
+$gray-700: #9B9B9B;
+//white
+$white: #FFF;
+/** Basic color setting  End */
+
+$font-sz: (
+  xs: 0.75rem, // 12px
+  sm: 0.875rem, // 14px
+  md: 1rem, // 16px
+  lg: 1.125rem, //18px
+  xl: 1.25rem, //20px
+  2xl: 1.5rem, // 24px
+);
+
+$break-point: (
+  'mobile': 576px,
+  'pad': 768px,
+  'pc': 1024px
+)
+
+
+
