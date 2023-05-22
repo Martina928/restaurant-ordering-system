@@ -23,22 +23,19 @@ const routes: Routes = [
     canActivate: []
   },
   {
-    path: '',
+    path: ROUTING_PATH.MENU,
     component: LayoutComponent,
-    children: [
-      {
-        path: ROUTING_PATH.MENU,
-        loadChildren: () => import('./content/menu/menu.module').then(m => m.MenuModule)
-      },
-      { 
-        path: ROUTING_PATH.MEMBER, 
-        loadChildren: () => import('./content/member/member.module').then(m => m.MemberModule) 
-      },
-      { 
-        path: ROUTING_PATH.CHECK_OUT, 
-        loadChildren: () => import('./content/check-out/check-out.module').then(m => m.CheckOutModule) 
-      },
-    ]
+    loadChildren: () => import('./content/menu/menu.module').then(m => m.MenuModule)
+  },
+  {
+    path: ROUTING_PATH.MEMBER,
+    component: LayoutComponent,
+    loadChildren: () => import('./content/member/member.module').then(m => m.MemberModule)
+  },
+  {
+    path: ROUTING_PATH.CHECK_OUT,
+    component: LayoutComponent,
+    loadChildren: () => import('./content/check-out/check-out.module').then(m => m.CheckOutModule)
   },
   {
     path: '**',
