@@ -21,19 +21,65 @@ $white: #FFF;
 /** Basic color setting  End */
 
 $font-sz: (
-  xs: 0.75rem, // 12px
-  sm: 0.875rem, // 14px
-  md: 1rem, // 16px
-  lg: 1.125rem, //18px
-  xl: 1.25rem, //20px
-  2xl: 1.5rem, // 24px
+  // xs: 12px,
+  // sm: 14px,
+  // md: 16px,
+  // lg: 18px,
+  // xl: 20px,
+  // 2xl: 24px
+
+  xs: 0.75rem,
+    // 12px
+  sm: 0.875rem,
+    // 14px
+  md: 1rem,
+    // 16px
+  lg: 1.125rem,
+    //18px
+  xl: 1.25rem,
+    //20px
+  2xl: 1.5rem,
+    // 24px
+);
+
+$bd-radius: (
+  sm: 3px,
+  default: 6px,
+  lg: 10px,
+);
+
+$bx-shadow: (
+  input: 5px 5px 10px,
 );
 
 $break-point: (
   'mobile': 576px,
   'pad': 768px,
   'pc': 1024px
-)
+);
 
+$bg-img:url('./assets/image/logo-50.svg');
 
+/** Background setting */
+@mixin bg-light() {
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-100;
+}
+@mixin bg-dark() {
+  width: 100vw;
+  height: 100%;
+  background-color: $primary-900;
+}
+
+/** Page padding setting */
+@mixin page-padding-size() {
+  padding: .75rem;
+  @media screen and (min-width: map-get($break-point, 'pad')) {
+    padding: 1.5rem;    
+  }
+  @media screen and (min-width: map-get($break-point, 'pc')) {
+    padding: 2rem;
+  }
+}
 

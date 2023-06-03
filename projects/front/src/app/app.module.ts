@@ -10,6 +10,8 @@ import { LoginComponent } from './content/login/login.component';
 import { RegisterComponent } from './content/register/register.component';
 import { HomeComponent } from './content/home/home.component';
 import { LayoutComponent } from './core/component/layout/layout.component';
+import { SharedModule } from './shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,9 @@ import { LayoutComponent } from './core/component/layout/layout.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
     AppRoutingModule
   ],
   providers: [],

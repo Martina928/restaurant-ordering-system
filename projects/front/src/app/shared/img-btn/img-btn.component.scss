@@ -1,0 +1,17 @@
+@import '../../../custom.scss';
+
+.img-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 225px;
+  background-color: $primary-400;
+  border-radius: map-get($bd-radius, 'lg');
+
+  img {
+    width: 100px;
+    object-fit: contain;
+  }
+}

@@ -1,1 +1,28 @@
-<p>home works!</p>
+<section *ngIf="count === 0">
+    <img class="logo" src="./assets/image/logo-100.png" alt="Chill burger online ordering system">
+</section>
+
+<section *ngIf="count === 1">
+  <div class="d-flex flex-wrap justify-content-center">
+    <div *ngFor="let btn of imgBtn" class="p-5">
+      <app-img-btn 
+        [img]="btn.img" 
+        [title]="btn.title"
+        (click)="setForm(btn.form)"
+      ></app-img-btn>
+    </div>
+  </div>
+ 
+  <a class="block text-center text-secondary" href="">已經點過餐了嗎？查看訂單狀態</a>
+</section>
+
+<section *ngIf="count === 2">
+  <div class="w-70 text-center">
+    <h1 class="mb-3">請輸入取餐手機號碼</h1>
+    <form [formGroup]="inputForm" (submit)="onSubmit()">
+      <input class="lg mb-5" type="text" placeholder="請輸入取餐人手機號碼" formControlName="phone">
+      <button type="submit" class="lg mb-5">開始點餐</button>
+    </form>
+  </div>
+  
+</section>
